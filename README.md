@@ -24,7 +24,7 @@ git checkout -b dev
 git add .
 git commit
 ...
-git push 
+git push --set-upstream origin dev
 
 # rebase （变基）并且合并为一个commit
 git rebase main
