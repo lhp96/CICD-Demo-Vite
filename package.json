@@ -10,11 +10,18 @@
     "lint": "npm run lint:js && npm run lint:style",
     "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx ./src",
     "lint:prettier": "prettier --check \"src/**/*\" --end-of-line auto",
-    "lint:style": "stylelint --fix 'src/**/*.{css,scss,less}' --cache"
+    "lint:style": "stylelint --fix 'src/**/*.{css,scss,less}' --cache",
+    "test": "jest",
+    "test:e2e": "jest --config=jest.config.e2e.js"
   },
   "dependencies": {
+    "@testing-library/react": "^13.4.0",
+    "@types/jest": "^29.1.2",
+    "jest": "27.5.1",
+    "jest-environment-jsdom": "^29.1.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "ts-jest": "^29.0.3"
   },
   "devDependencies": {
     "@types/node": "^18.11.0",
