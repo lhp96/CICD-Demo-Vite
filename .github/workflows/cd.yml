@@ -74,7 +74,7 @@ jobs:
         with:
           command_timeout: 4m
           host: ${{ secrets.HOST }} # 服务器host
-          username: ${{ secrets.USER }} # 服务器用户名
+          username: ${{ secrets.USERNAME }} # 服务器用户名
           password: ${{ secrets.PASSWORD }} # 服务器密码
           script: | # 运行多行命令
             rm -rf /data/www/*
