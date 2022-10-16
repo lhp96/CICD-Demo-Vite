@@ -4,6 +4,8 @@ Demo for `React + Vite + TypeScript`
 
 动手完成基础 CI/CD
 
+![CI](https://github.com/lhp96/CICD-Demo-Vite/actions/workflows/ci.yml/badge.svg)![CD](https://github.com/lhp96/CICD-Demo-Vite/actions/workflows/cd.yml/badge.svg)
+
 ## CI 持续集成
 
 - Lint 代码扫描
@@ -27,10 +29,15 @@ Demo for `React + Vite + TypeScript`
 > 1. 服务器安装 docker-compose
 > 2. 编写 docker-compose.yml 文件
 > 3. docker-compose up -d
+>
+> 注意事项：
+>
+> 1. 需要先删除要部署目录的原有内容(静态资源文件/文件夹)
+> 2. 上传文件之后，可以将dist(打包好的内容)解压或移动，并且做上传后的其他操作
 
 ### 版本号
 
-- 每次 package.json 的 version 改变才会重新部署
+- 每次 package.json 的 version 改变才会重新 发版&部署，不想发版需要把Realease注释
 - Actions 如果到在 Create GitHub Release 之后失败，就需要重新发版或者手动部署
 
 ## Github 开源项目工作流（示例）
