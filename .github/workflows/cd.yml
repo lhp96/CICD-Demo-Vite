@@ -87,5 +87,16 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: 'dist/*'
+          source: 'dist/'
           target: '/data/www'
+
+      # 复制新的
+      - name: Copy new source
+        uses: appleboy/ssh-action@master
+        with:
+          command_timeout: 4m
+          host: ${{ secrets.HOST }} # 服务器host
+          username: ${{ secrets.USERNAME }} # 服务器用户名
+          password: ${{ secrets.PASSWORD }} # 服务器密码
+          script: | # 运行多行命令
+            cp -rf /data/www/dist/* /data/www
