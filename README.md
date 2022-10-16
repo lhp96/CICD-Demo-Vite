@@ -13,6 +13,29 @@ Demo for  `React + Vite + TypeScript`
     - Jest
 
 
+
+## CD 持续部署
+
+在编写**CD Workflow**前，我们要准备以下东西：
+
+1. 内置`nginx`的服务器一台：用于部署制品
+2. 服务器的密钥对：用于提供给流水线通过 ssh 免密登录到服务器进行部署
+3. `Github`里的**Personal Access Token**：用于提供给流水线免密登录`github`账号进行发布制品的操作
+4. 把步骤 2 和步骤 3 及其他关于机器的信息都放在对应仓库的**Secret**里
+
+> 容器部署：
+>
+> 1. 服务器安装docker-compose
+> 2. 编写docker-compose.yml文件
+> 3. docker-compose up -d
+
+### 版本号
+
+- 每次package.json的version改变才会重新部署
+
+
+
+
 ## Github 开源项目工作流（示例）
 
 ### 在本地终端操作
