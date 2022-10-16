@@ -68,15 +68,18 @@ jobs:
       #     asset_path: ./assets.zip
       #     asset_name: assets.zip
       #     asset_content_type: application/zip
-      - name: Upload to Deploy Server
-        uses: appleboy/scp-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          script: |
-            rm -rf /data/www
+
+      # 删除旧静态资源
+      # - name: rm before project
+      #   uses: appleboy/scp-action@master
+      #   with:
+      #     command_timeout: 4m
+      #     host: ${{ secrets.HOST }}
+      #     username: ${{ secrets.USERNAME }}
+      #     password: ${{ secrets.PASSWORD }}
+      #     port: ${{ secrets.PORT }}
+      #     script: |
+      #       rm -rf /data/www
       # 把制品上传到部署机器
       - name: Upload to Deploy Server
         uses: appleboy/scp-action@master
