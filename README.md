@@ -1,18 +1,17 @@
 # CICD-Demo-Vite
 
-Demo for  `React + Vite + TypeScript`
+Demo for `React + Vite + TypeScript`
 
 动手完成基础 CI/CD
 
 ## CI 持续集成
+
 - Lint 代码扫描
-    - eslint
-    - prittier
-    - stylelint
+  - eslint
+  - prittier
+  - stylelint
 - Test 代码测试
-    - Jest
-
-
+  - Jest
 
 ## CD 持续部署
 
@@ -25,20 +24,19 @@ Demo for  `React + Vite + TypeScript`
 
 > 容器部署：
 >
-> 1. 服务器安装docker-compose
-> 2. 编写docker-compose.yml文件
+> 1. 服务器安装 docker-compose
+> 2. 编写 docker-compose.yml 文件
 > 3. docker-compose up -d
 
 ### 版本号
 
-- 每次package.json的version改变才会重新部署
-
-
-
+- 每次 package.json 的 version 改变才会重新部署
+- Actions 如果到在 Create GitHub Release 之后失败，就需要重新发版或者手动部署
 
 ## Github 开源项目工作流（示例）
 
 ### 在本地终端操作
+
 ```shell
 # 切换分支
 git checkout -b dev
@@ -57,12 +55,14 @@ git rebase main
 git push -f origin dev
 ```
 
-### Github操作
-- 提PullRequest
-- 同意之后：Squash and merge
-- 会将多个commit 合并为 一个commit
+### Github 操作
 
-### 删除dev分支（功能分支）
+- 提 PullRequest
+- 同意之后：Squash and merge
+- 会将多个 commit 合并为 一个 commit
+
+### 删除 dev 分支（功能分支）
+
 ```shell
 # 在Github：Delete Branch
 
@@ -72,4 +72,4 @@ git branch -D dev
 
 # 更新
 git pull origin main
-````
+```
