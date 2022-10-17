@@ -4,6 +4,11 @@ Demo for `React + Vite + TypeScript`
 
 动手完成基础 CI/CD
 
+**Github Actions 触发条件：**
+
+- PR 合并的时候会执行CI
+- main分支代码Push会执行CD，PR合并也会触发Push
+
 ![CI](https://github.com/lhp96/CICD-Demo-Vite/actions/workflows/ci.yml/badge.svg)![CD](https://github.com/lhp96/CICD-Demo-Vite/actions/workflows/cd.yml/badge.svg)
 
 ## CI 持续集成
