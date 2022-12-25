@@ -25,7 +25,7 @@ const App: FC<Props> = ({ value }) => {
           </button>
         </p>
 
-        <h1>2022.12.25--13:06</h1>
+        <h1>2022.12.25--13:18</h1>
         <h2>just for yolo</h2>
         <p role="props">{value}</p>
       </header>
